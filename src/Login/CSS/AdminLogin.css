@@ -1,140 +1,157 @@
-/* AdminLogin.css */
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  /* Using a standard system font stack instead of Poppins */
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif;
-}
-
+/* ========== GENERAL LAYOUT ========== */
 .login-container {
-  background-color: #050505; /* Deep black background */
-  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
+  background: #f5f7fa;
+  padding: 20px;
   position: relative;
-  color: #ffffff;
 }
 
-/* Logo Styling */
+/* Top-left logo */
 .logo-area {
   position: absolute;
-  top: 30px;
-  left: 30px;
+  top: 20px;
+  left: 20px;
 }
 
 .logo-img {
-  width: 100px; /* Adjust based on your actual logo size */
-  height: auto;
+  width: 60px;
+  height: 60px;
 }
 
-/* Login Form Styling */
+/* Login Card */
 .login-wrapper {
   width: 100%;
-  max-width: 400px;
-  padding: 20px;
+  max-width: 420px;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
 }
 
+/* Header */
 .login-header {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 30px;
-  border-bottom: 1px solid #333; /* Subtle underline */
-  padding-bottom: 10px;
-}
-
-.login-header h2 {
-  font-size: 1.2rem;
-  font-weight: 500;
-  margin: 0;
-}
-
-.header-icon {
-  width: 24px;
-  height: 24px;
-  fill: none;
-  stroke: white;
-  stroke-width: 2;
-}
-
-/* Form Groups */
-.form-group {
+  text-align: center;
   margin-bottom: 20px;
 }
 
-.form-group label {
-  display: block;
-  font-size: 0.9rem;
+.header-icon {
+  width: 40px;
+  height: 40px;
+  stroke: #1e3a8a; /* dark blue */
+  fill: none;
+  margin-bottom: 10px;
+}
+
+/* Form */
+.form-group {
+  margin-bottom: 16px;
+}
+
+label {
   font-weight: 600;
-  margin-bottom: 8px;
+  display: block;
+  margin-bottom: 6px;
+  color: #333;
 }
 
 .form-input {
   width: 100%;
-  padding: 12px 15px;
-  border: none;
-  background-color: #e6e6e6; /* Light gray input background */
-  border-radius: 4px;
-  font-size: 1rem;
+  padding: 10px 12px;
+  border: 1px solid #ccd1d9;
+  border-radius: 8px;
+  font-size: 15px;
   outline: none;
-  /* Use black text in the input fields */
-  color: #000;
+  transition: border 0.2s ease;
 }
 
 .form-input:focus {
-  background-color: #ffffff;
-  box-shadow: 0 0 0 2px #00e676;
+  border-color: #1e3a8a;
 }
 
-/* Links and Buttons */
+/* Links */
 .forgot-password {
   display: block;
   text-align: right;
-  color: #00e676; /* Bright Green */
-  font-size: 0.85rem;
-  font-weight: 600;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #1e3a8a;
   text-decoration: none;
-  margin-top: -10px;
-  margin-bottom: 30px;
 }
 
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+/* Login Button */
 .login-btn {
   width: 100%;
+  background: #1e3a8a;
+  color: white;
   padding: 12px;
-  background-color: #00e676; /* Bright Green */
   border: none;
-  border-radius: 25px; /* Pill shape */
-  color: #000;
-  font-weight: 700;
-  font-size: 1rem;
+  border-radius: 8px;
+  font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.3s;
-  max-width: 200px;
-  display: block;
-  margin: 0 auto 20px auto; /* Center button */
+  font-weight: bold;
+  transition: background 0.2s;
 }
 
 .login-btn:hover {
-  background-color: #00c968;
+  background: #162c6a;
 }
 
+/* Footer */
 .register-text {
   text-align: center;
-  font-size: 0.9rem;
+  margin-top: 18px;
+  font-size: 14px;
 }
 
 .register-link {
-  color: #00e676;
+  color: #1e3a8a;
+  font-weight: bold;
   text-decoration: none;
-  font-weight: 600;
 }
 
 .register-link:hover {
   text-decoration: underline;
+}
+
+/* ========== MOBILE RESPONSIVE RULES ========== */
+@media (max-width: 600px) {
+  .login-wrapper {
+    max-width: 100%;
+    padding: 22px;
+    border-radius: 10px;
+  }
+
+  .logo-img {
+    width: 48px;
+    height: 48px;
+  }
+
+  .header-icon {
+    width: 34px;
+    height: 34px;
+  }
+
+  .login-btn {
+    padding: 10px;
+    font-size: 15px;
+  }
+}
+
+/* ========== TABLET RESPONSIVE ========== */
+@media (max-width: 900px) {
+  .logo-area {
+    top: 10px;
+    left: 10px;
+  }
+
+  .logo-img {
+    width: 50px;
+  }
 }
