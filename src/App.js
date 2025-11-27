@@ -1,13 +1,8 @@
-import logo from "./logo.svg";
-import "./App.css";
-import Login from "./Login/Login";
+import React from "react";
+import AdminLogin from "./AdminLogin";
 
 function App() {
-  return (
-    <>
-      <Login />
-    </>
-  );
+  return <AdminLogin />;
 }
 
 export default App;
